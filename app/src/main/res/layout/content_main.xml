@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.karthikponnam.textrepeatersample.MainActivity"
+    android:background="@color/clouds"
+    android:padding="@dimen/padding_layout">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_text"
+                android:text="Repeat Text" />
+
+            <EditText
+                android:id="@+id/text_repeat"
+                android:padding="@dimen/padding_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Text"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_text"
+                android:text="Number" />
+
+            <EditText
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Number"
+                android:inputType="number"
+                android:padding="@dimen/padding_text" />
+
+            <CheckBox
+                android:id="@+id/add_space"
+                android:checked="false"
+                android:text="Add Space"
+                android:padding="@dimen/padding_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/add_new_line"
+                android:checked="false"
+                android:text="Add Next Line"
+                android:padding="@dimen/padding_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/add_other"
+                android:checked="false"
+                android:text="Add Other Charachter"
+                android:padding="@dimen/padding_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:enabled="false"
+                android:id="@+id/other_char"
+                android:padding="@dimen/padding_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Character"
+                android:inputType="text" />
+
+
+            <Button
+                android:id="@+id/generate"
+                android:textColor="@color/clouds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Generate" />
+
+
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/display"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

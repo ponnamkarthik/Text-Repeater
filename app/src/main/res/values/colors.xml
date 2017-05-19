@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7B1FA2</color>
+    <color name="colorPrimaryDark">#7B1FA2</color>
+    <color name="colorAccent">#E040FB</color>
+
+    <!--Flat Colors-->
+    <color name="purple_flat_amethyst">#9b59b6</color>
+    <color name="clouds">#ecf0f1</color>
+    <color name="flat_blue_peter_river">#3498db</color>
+
+    <color name="primary">#9C27B0</color>
+    <color name="primary_dark">#7B1FA2</color>
+    <color name="primary_light">#E1BEE7</color>
+    <color name="accent">#E040FB</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+</resources>
