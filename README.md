@@ -10,11 +10,11 @@ A Simple Text Repeater Library written in java for Android
 
 
 ## Screenshots
-<img src="https://raw.githubusercontent.com/PonnamKarthik/TextRepeater/master/screenshots/screen_one.png" width="400">
+<img src="https://raw.githubusercontent.com/PonnamKarthik/TextRepeater/master/screenshots/screen_one.png" width="300">
 
-<img src="https://raw.githubusercontent.com/PonnamKarthik/TextRepeater/master/screenshots/screen_two.png" width="400">
+<img src="https://raw.githubusercontent.com/PonnamKarthik/TextRepeater/master/screenshots/screen_two.png" width="300">
 
-<img src="https://raw.githubusercontent.com/PonnamKarthik/TextRepeater/master/screenshots/screen_three.png" width="400">
+<img src="https://raw.githubusercontent.com/PonnamKarthik/TextRepeater/master/screenshots/screen_three.png" width="300">
 
 
 
@@ -81,15 +81,15 @@ Android
 ## Example 3
 
 ```java
-Repeater.repeat("Android", 5, false, true, true, ":octocat:");
+Repeater.repeat("Android", 5, false, true, true, " :computer:");
 ```
 
 ```java
-Android :octocat:
-Android :octocat:
-Android :octocat:
-Android :octocat:
-Android :octocat:
+Android :computer:
+Android :computer:
+Android :computer:
+Android :computer:
+Android :computer:
 ```
 
 ## Working Example
