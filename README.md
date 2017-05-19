@@ -81,15 +81,15 @@ Android
 ## Example 3
 
 ```java
-Repeater.repeat("Android", 5, false, true, true, " :computer:");
+Repeater.repeat("Android", 5, false, true, true, "😉");
 ```
 
 ```java
-Android :computer:
-Android :computer:
-Android :computer:
-Android :computer:
-Android :computer:
+Android 😉
+Android 😉
+Android 😉
+Android 😉
+Android 😉
 ```
 
 ## Working Example
