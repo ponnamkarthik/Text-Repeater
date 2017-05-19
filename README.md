@@ -1,10 +1,8 @@
 # Text-Repeater
-A Simple Text Repeater Application written in java for Android
-
-
-# FinestWebView
 [![Platform](https://img.shields.io/badge/platform-android-green.svg)](http://developer.android.com/index.html)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](http://opensource.org/licenses/MIT)
+
+A Simple Text Repeater Application written in java for Android
 
 
 * Repeating text is easy now
