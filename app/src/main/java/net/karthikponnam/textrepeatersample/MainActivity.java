@@ -1,11 +1,15 @@
 package net.karthikponnam.textrepeatersample;
 
 import android.app.ProgressDialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -50,13 +54,14 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.developer)
     RelativeLayout developer;
 
-    String text, o_char;
+    String text, o_char, f_text;
     int number;
     Boolean space_checked = false;
     Boolean new_line_checked = false;
     Boolean other_checked = false;
 
     ProgressDialog progressDialog;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +70,35 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        /*
+        Shareing button on Click
+         */
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.hide();
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+                ClipData clip = ClipData.newPlainText("share", f_text);
+                clipboard.setPrimaryClip(clip);
+
+                Snackbar.make(fab,"Text Copied to Clipboard", Snackbar.LENGTH_SHORT).show();
+
+                //Log.d("GHM", "onClick: " + f_text.length());
+                String f = f_text;
+                if(f_text.length() > 125000) {
+                    Log.d("GHM", "onClick: " + "Trimmed");
+                    Toast.makeText(MainActivity.this, "Generated Text Length is very long to share and is automatically trimmed.", Toast.LENGTH_LONG).show();
+                    f = f_text.substring(0,125000);
+                }
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, f);
+                startActivity(Intent.createChooser(sharingIntent, "Share via"));
+            }
+        });
 
 
         /*
@@ -90,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
         generate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                hideFab();
                 if(count.getText().toString().trim().length() != 0) {
                     if(Integer.parseInt(count.getText().toString().trim()) > 5000) {
                         final AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
@@ -169,12 +204,29 @@ public class MainActivity extends AppCompatActivity {
             super.onPostExecute(s);
             progressDialog.dismiss();
             display.setText(s);
+            f_text = s;
+            if(s.trim().length() != 0)
+                showFab();
         }
     }
 
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
+    /*
+   Show / Hide Functions
+    */
+    public void hideFab() {
+        fab.hide();
+    }
+    public void showFab() {
+        fab.show();
+    }
+
+    public void share() {
+
     }
 
 }

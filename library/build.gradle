@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 ext {
-    bintrayRepo = 'maven'
+    bintrayRepo = 'TextRepeater'
     bintrayName = 'text-repeater'
 
     publishedGroupId = 'net.karthikponnam.textrepeater'
     libraryName = 'TextRepeater'
-    artifact = 'text-repeater'
+    artifact = 'library'
 
     libraryDescription = 'A Simple Text Repeater Library written in java for Android '
 
