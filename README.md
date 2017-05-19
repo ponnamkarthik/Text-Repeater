@@ -10,11 +10,11 @@ A Simple Text Repeater Application written in java for Android
 
 
 ## Screenshots
-<img src="https://raw.githubusercontent.com/PonnamKarthik/TextRepeater/master/screenshots/screen_one.png" width="888">
+<img src="https://raw.githubusercontent.com/PonnamKarthik/TextRepeater/master/screenshots/screen_one.png" width="400">
 
-<img src="https://raw.githubusercontent.com/PonnamKarthik/TextRepeater/master/screenshots/screen_one.png" width="888">
+<img src="https://raw.githubusercontent.com/PonnamKarthik/TextRepeater/master/screenshots/screen_two.png" width="400">
 
-<img src="https://raw.githubusercontent.com/PonnamKarthik/TextRepeater/master/screenshots/screen_one.png" width="888">
+<img src="https://raw.githubusercontent.com/PonnamKarthik/TextRepeater/master/screenshots/screen_three.png" width="400">
 
 
 
@@ -94,7 +94,8 @@ Android :octocat:
 
 ## Working Example
 
-* Please check the Sample Project
+* Check the Sample Project
+
 
 >   Thanks
 >   Karthik Ponnam
